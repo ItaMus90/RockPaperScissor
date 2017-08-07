@@ -5,5 +5,5 @@ package com.itamus90.enumGameItems;
  */
 public enum RESULT
 {
-    WIN,LOSe,ITE;
+    WIN,LOSE,TIE;
 }

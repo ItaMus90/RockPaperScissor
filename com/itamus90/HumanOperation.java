@@ -7,5 +7,5 @@ import com.itamus90.enumGameItems.CHOICES;
  */
 public interface HumanOperation
 {
-    public CHOICES getChoices(String choices);
+    public CHOICES getChoices(char choices);
 }

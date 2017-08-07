@@ -5,8 +5,15 @@ import com.itamus90.enumGameItems.CHOICES;
 /**
  * Created by Itamar on 05-Aug-17.
  */
-public class Player implements HumanOperation
+public class Player extends PlayerType implements HumanOperation
 {
+
+
+    public Player()
+    {
+        super();
+    }
+
     /**
      *
      * @param choices rock paper or scissor
@@ -14,12 +21,11 @@ public class Player implements HumanOperation
      * than return none
      */
     @Override
-    public CHOICES getChoices(String choices)
+    public CHOICES getChoices(char choices)
     {
         CHOICES enumChoices = CHOICES.NONE;
-        char playerChoice = choices.toUpperCase().charAt(0);
 
-        switch (playerChoice)
+        switch (choices)
         {
             case 'R':
                 enumChoices = CHOICES.ROCK;

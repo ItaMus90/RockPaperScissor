@@ -7,12 +7,13 @@ import java.util.Random;
 /**
  * Created by Itamar on 05-Aug-17.
  */
-public class Computer implements AIOperation
+public class Computer extends PlayerType implements AIOperation
 {
     private Random random;
 
     public Computer()
     {
+        super();
         random = new Random();
     }
 
