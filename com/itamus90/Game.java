@@ -46,6 +46,7 @@ public class Game
         displayState(player);
         System.out.println("-----------------");
         displayState(computer);
+
     }
 
     /**
@@ -54,8 +55,8 @@ public class Game
      */
     private void displayState(PlayerType playerType)
     {
-        System.out.println(playerType.getClass().getName() + " have won " + playerType.getWins() + " times");
-        System.out.println(playerType.getClass().getName() + " have lost " + playerType.getLoses() + " times");
+        System.out.println(playerType.getClass().getSimpleName() + " have won " + playerType.getWins() + " times");
+        System.out.println(playerType.getClass().getSimpleName() + " have lost " + playerType.getLoses() + " times");
         System.out.println("The tie happen " + playerType.getTies() + " times");
     }
 
@@ -120,6 +121,10 @@ public class Game
             if (!playerChoices.equals(CHOICES.NONE))
             {
                 isNone = false;
+            }
+            else
+            {
+                System.out.println("Invalid input");
             }
 
         }while (isNone);
